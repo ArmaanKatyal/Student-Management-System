@@ -42,6 +42,7 @@ public class App {
 					CourseDao courseDao = new CourseDaoImpl();
 					StudentDao studentDao = new StudentDaoImpl();
 					studentDao.add_student(new Student(Stu_id,Stu_name,Stu_age,courseDao.get_course(Stu_course)));
+					System.out.println("Student Added Successfully");
 				} catch(Exception e) {
 					System.out.println(" Process Unsuccessful... Try Again.");
 				}
@@ -59,6 +60,7 @@ public class App {
 					CourseDao courseDao = new CourseDaoImpl();
 					StudentDao studentDao = new StudentDaoImpl();
 					studentDao.update_student(new Student(Stu_id,Stu_name,Stu_age,courseDao.get_course(Stu_course)));
+					System.out.println("Details Updated Successfully");
 				} catch(Exception e) {
 					System.out.println(" Process Unsuccessful... Try Again.");
 				}
@@ -69,6 +71,7 @@ public class App {
 					Integer Stu_id = Integer.parseInt(reader.readLine());
 					StudentDao studentDao = new StudentDaoImpl();
 					studentDao.delete_student(Stu_id);
+					System.out.println("Student Deleted Successfully");
 				} catch(Exception e) {
 					System.out.println(" Process Unsuccessful... Try Again.");
 				}

@@ -9,7 +9,7 @@ import StudentManagement.dto.*;
 public class App {
 	
 	public static void Main_Menu() {
-		System.out.println("");
+		System.out.println();
 		System.out.println("1. Student Menu");
 		System.out.println("2. Course Menu");
 		System.out.println("3. Exit");
@@ -17,7 +17,7 @@ public class App {
 	}
 	public static void Student_Menu() throws IOException {
 		System.out.println("---------- Student Menu ---------");
-		System.out.println("");
+		System.out.println();
 		while(true) {
 			System.out.println("1. Add Student");
 			System.out.println("2. Update Student");

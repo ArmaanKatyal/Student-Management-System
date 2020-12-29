@@ -12,8 +12,8 @@ public class StudentDetails {
 	List<Course> courseList;
 	
 	private StudentDetails() {
-		studentList = new ArrayList<Student>();
-		courseList= new ArrayList<Course>();
+		studentList = new ArrayList<>();
+		courseList= new ArrayList<>();
 	}
 	public static StudentDetails getObj() {
 		if(studentDetails != null) {

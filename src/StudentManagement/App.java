@@ -31,17 +31,17 @@ public class App {
 			int choice = Integer.parseInt(reader.readLine());
 			if(choice==1) {
 				try {
-				System.out.print("Enter Student ID :");
-				Integer Stu_id = Integer.parseInt(reader.readLine());
-				System.out.print("Enter Student Name :");
-				String Stu_name = reader.readLine();
-				System.out.print("Enter Student Age :");
-				Integer Stu_age = Integer.parseInt(reader.readLine());
-				System.out.print("Enter Course ID :");
-				Integer Stu_course = Integer.parseInt(reader.readLine());
-				CourseDao courseDao = new CourseDaoImpl();
-				StudentDao studentDao = new StudentDaoImpl();
-				studentDao.add_student(new Student(Stu_id,Stu_name,Stu_age,courseDao.get_course(Stu_course)));
+					System.out.print("Enter Student ID :");
+					Integer Stu_id = Integer.parseInt(reader.readLine());
+					System.out.print("Enter Student Name :");
+					String Stu_name = reader.readLine();
+					System.out.print("Enter Student Age :");
+					Integer Stu_age = Integer.parseInt(reader.readLine());
+					System.out.print("Enter Course ID :");
+					Integer Stu_course = Integer.parseInt(reader.readLine());
+					CourseDao courseDao = new CourseDaoImpl();
+					StudentDao studentDao = new StudentDaoImpl();
+					studentDao.add_student(new Student(Stu_id,Stu_name,Stu_age,courseDao.get_course(Stu_course)));
 				} catch(Exception e) {
 					System.out.println(" Process Unsuccessful... Try Again.");
 				}
@@ -121,22 +121,56 @@ public class App {
 					String Course_name = reader.readLine();
 					System.out.print("Enter Course Fee");
 					Double Course_fee = Double.parseDouble(reader.readLine());
-
+					CourseDao courseDao = new CourseDaoImpl();
+					courseDao.add_course(new Course(Course_id,Course_name,Course_fee));
+					System.out.println("Course Added Successfully");
 				}catch(Exception e){
 					System.out.println(" Process Unsuccessful... Try Again.");
 				}
 			}else if(choice == 2){
-
+				try{
+					System.out.print("Enter Course ID :");
+					int Course_id = Integer.parseInt(reader.readLine());
+					System.out.print("Enter Course Name :");
+					String Course_name = reader.readLine();
+					System.out.print("Enter Course Fee");
+					Double Course_fee = Double.parseDouble(reader.readLine());
+					CourseDao courseDao = new CourseDaoImpl();
+					courseDao.update_course(new Course(Course_id,Course_name,Course_fee));
+					System.out.println("Course Updated Successfully");
+				}catch (Exception e){
+					System.out.println(" Process Unsuccessful... Try Again.");
+				}
 			}else if(choice == 3){
-
+				try{
+					System.out.print("Enter Course ID :");
+					int Course_id = Integer.parseInt(reader.readLine());
+					CourseDao courseDao = new CourseDaoImpl();
+					courseDao.delete_course(Course_id);
+					System.out.println("Course Deleted Successfully");
+				}catch(Exception e){
+					System.out.println(" Process Unsuccessful... Try Again.");
+				}
 			}else if(choice == 4){
-
+				try{
+					System.out.print("Enter Course ID :");
+					int Course_id = Integer.parseInt(reader.readLine());
+					CourseDao courseDao = new CourseDaoImpl();
+					System.out.println(courseDao.get_course(Course_id));
+				}catch(Exception e){
+					System.out.println(" Process Unsuccessful... Try Again.");
+				}
 			}else if(choice == 5){
-
+				try{
+					CourseDao courseDao = new CourseDaoImpl();
+					System.out.println(courseDao.getCourses());
+				}catch(Exception e){
+					System.out.println(" Process Unsuccessful... Try Again.");
+				}
 			}else if(choice ==6){
 				break;
 			}else{
-
+				System.out.println("Please enter a valid choice ... ");
 			}
 
 		}

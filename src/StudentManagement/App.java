@@ -103,11 +103,11 @@ public class App {
 		System.out.println("---------- Course Menu ----------");
 		System.out.println();
 		while(true) {
-			System.out.println("1. Add Student");
-			System.out.println("2. Update Student");
-			System.out.println("3. Delete Student");
-			System.out.println("4. Student Detail");
-			System.out.println("5. All Students");
+			System.out.println("1. Add Course");
+			System.out.println("2. Update Course");
+			System.out.println("3. Delete Course");
+			System.out.println("4. Course Detail");
+			System.out.println("5. All Courses");
 			System.out.println("6. Exit to Main Menu");
 			System.out.println("\n");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

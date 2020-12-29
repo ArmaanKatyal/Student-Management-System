@@ -8,28 +8,26 @@ import StudentManagement.dto.*;
 
 public class StudentDaoImpl implements StudentDao {
 	StudentDetails studentDetails;
-
+	public StudentDaoImpl() {
+		studentDetails = StudentDetails.getObj();
+	}
 	@Override
-	public Boolean add_student(Student student) {
-		return studentDetails.getStudentList().add(student);
+	public void add_student(Student student) {
+		studentDetails.getStudentList().add(student);
 	}
 
 	@Override
-	public Boolean update_student(Student student) {
+	public void update_student(Student student) {
 		if(getStudentElementIndex(student.getStudent_id())>=0) {
 			studentDetails.getStudentList().set(getStudentElementIndex(student.getStudent_id()), student);
-			return true;
 		}
-		return false;
 	}
 
 	@Override
-	public Boolean delete_student(Integer student_id) {
+	public void delete_student(Integer student_id) {
 		if(getStudentElementIndex(student_id)>=0) {
 			studentDetails.getStudentList().remove(getStudentElementIndex(student_id));
-			return true;
 		}
-		return false;
 	}
 
 	@Override

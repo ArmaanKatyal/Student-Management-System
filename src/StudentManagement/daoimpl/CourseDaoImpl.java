@@ -34,7 +34,7 @@ public class CourseDaoImpl implements CourseDao{
 
 	@Override
 	public Course get_course(Integer course_id) {
-		return studentDetails.getCourseList().get(course_id);
+		return studentDetails.getCourseList().get(getCourseElementIndex(course_id));
 	}
 
 	@Override

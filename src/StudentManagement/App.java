@@ -27,7 +27,7 @@ public class App {
 			System.out.println("6. Exit to Main Menu");
 			System.out.println("\n");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			System.out.println("Enter your choice(SM) :");
+			System.out.print("Enter your choice(SM) :");
 			int choice = Integer.parseInt(reader.readLine());
 			if(choice==1) {
 				try {

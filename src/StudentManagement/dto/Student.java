@@ -5,9 +5,7 @@ public class Student {
 	String student_name;
 	Integer student_age;
 	Course course;
-	public Student() {
-		
-	}
+
 	public Student(Integer student_id, String student_name, Integer student_age, Course course) {
 		this.student_id = student_id;
 		this.student_name = student_name;
